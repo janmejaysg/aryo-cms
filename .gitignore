@@ -35,3 +35,41 @@ Thumbs.db
 
 # Ignore node_modules if using npm/yarn
 node_modules/
+
+# Ignore XAMPP and system-specific files
+*.log
+*.tmp
+error_log
+php_errors.log
+Thumbs.db
+.DS_Store
+
+# Ignore Drupal-specific files and directories
+/sites/default/files/
+/sites/default/settings.php
+/sites/default/services.yml
+/sites/*/private/
+/core/
+/vendor/
+/modules/contrib/
+/themes/contrib/
+/libraries/
+/config/
+/tmp/
+/cache/
+/backup/
+/sites/default/files/css/
+/sites/default/files/js/
+/sites/default/files/php/
+
+# Ignore environment-specific files
+*.env
+
+# Ignore IDE/editor-specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore node_modules if using npm/yarn
+node_modules/
