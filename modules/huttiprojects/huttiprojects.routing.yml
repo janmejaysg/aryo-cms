@@ -1,0 +1,87 @@
+huttiprojects.fetch_hutti_categories:
+  path: '/hutti-categories'
+  defaults:
+    _controller: '\Drupal\huttiprojects\Controller\HuttiCategoriesController::buildForm'
+    _title: 'All Categories'
+  requirements:
+    _permission: 'access content'
+
+huttiprojects.hutti_sub_categories:
+  path: '/hutti-sub-categories/{category}'
+  defaults:
+    _controller: 'Drupal\huttiprojects\Controller\HuttiSubCategoriesController::fetchHuttiSubCategories'
+    _title: 'Hutti Sub Categories'
+  requirements:
+    _permission: 'access content'
+
+huttiprojects.hutti_project_details_form:
+  path: '/hutti-sub-categories/get-hutti-projects/{category}/{subcategory}'
+  defaults:
+    _form: 'Drupal\huttiprojects\Form\HuttiProjectDetailsForm'
+    _title: 'Hutti Projects'
+  requirements:
+    _permission: 'access content'
+
+huttiprojects.hutti_meta_data_form:
+  path: '/hutti-sub-categories/get-hutti-metadata/{category}/{subcategory}'
+  defaults:
+    _form: 'Drupal\huttiprojects\Form\HuttiMetaDataForm'
+    _title: 'Meta Data'
+  requirements:
+    _permission: 'access content'
+
+huttiprojects.add_hutti_project_form:
+  path: '/add-new-project'
+  defaults:
+    _form: 'Drupal\huttiprojects\Form\HuttiNewProject'
+    _title: 'Add New Project'
+  requirements:
+    _permission: 'access content'
+
+huttiprojects.hutti_new_project:
+  path: '/hutti-new-project'
+  defaults:
+    _controller: 'Drupal\huttiprojects\Controller\HuttiNewProjectController::buildForm'
+    _title: 'Add New Project'
+  requirements:
+    _permission: 'access content'
+
+huttiprojects.add_metadata_form:
+  path: '/add-metadata'
+  defaults:
+    _form: 'Drupal\huttiprojects\Form\MetadataForm'
+    _title: 'Add Metadata'
+  requirements:
+    _permission: 'access content'
+
+huttiprojects.add_brand_form:
+  path: '/add-brand'
+  defaults:
+    _form: 'Drupal\huttiprojects\Form\BrandForm'
+    _title: 'Add Brand'
+  requirements:
+    _permission: 'access content'
+
+huttiprojects.add_search_form:
+  path: '/add-search'
+  defaults:
+    _form: 'Drupal\huttiprojects\Form\SearchForm'
+    _title: 'Add Search'
+  requirements:
+    _permission: 'access content'
+
+huttiprojects.add_category_form:
+  path: '/add-category'
+  defaults:
+    _form: 'Drupal\huttiprojects\Form\CategoryForm'
+    _title: 'Add Category'
+  requirements:
+    _permission: 'access content'
+
+huttiprojects.hutti_clicks_form:
+  path: '/download-hutti-clicks'
+  defaults:
+    _form: 'Drupal\huttiprojects\Form\HuttiClicksForm'
+    _title: 'Download Clicks'
+  requirements:
+    _permission: 'access content'

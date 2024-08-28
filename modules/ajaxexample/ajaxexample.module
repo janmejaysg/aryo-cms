@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Contains ajaxexample.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function ajaxexample_page_attachments(array &$attachments) {
+  // Attach the custom library to all pages
+  $attachments['#attached']['library'][] = 'ajaxexample/ajaxexample-library';
+}
+

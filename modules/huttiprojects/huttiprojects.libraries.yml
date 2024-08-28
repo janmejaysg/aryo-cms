@@ -1,0 +1,9 @@
+huttiprojects_js_css:
+  version: 1.x
+  css:
+    theme:
+      css/huttiprojects.css: {}
+  js:
+    js/huttiprojects.js: {}
+
+

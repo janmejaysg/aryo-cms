@@ -1,0 +1,190 @@
+aryolesdaryoleads.teams_report_form:
+  path: '/teams_report'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\AryoLeadsForm'
+    _title: 'Aryo Leads Form'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.fetch_data:
+  path: '/fetch-aryo-leads/{fromDate}/{toDate}/{status}/{category}/{projectName}/{leadId}/{agentId}/{mobile}'
+  defaults:
+    _controller: '\Drupal\aryoleads\Controller\AryoLeadsController::fetchData'
+    _title: 'Fetch Aryo Leads'
+  requirements:
+    _permission: 'access content'
+    # fromDate: '\d{4}-\d{2}-\d{2}' # Validate date format
+    # toDate: '\d{4}-\d{2}-\d{2}'   # Validate date format
+
+aryoleads.fetch_self_leads:
+  path: '/fetch-self-leads/{fromDate}/{toDate}/{status}/{category}/{projectName}/{leadId}/{agentId}/{mobile}'
+  defaults:
+    _controller: '\Drupal\aryoleads\Controller\AryoLeadsController::fetchSelfLeads'
+    _title: 'Fetch Aryo Leads'
+  requirements:
+    _permission: 'access content'
+    # fromDate: '\d{4}-\d{2}-\d{2}' # Validate date format
+    # toDate: '\d{4}-\d{2}-\d{2}'   # Validate date format
+
+aryoleads.get_todays_distributor_leads_count:
+  path: '/dist-leads-count'
+  defaults:
+    _controller: '\Drupal\aryoleads\Controller\AryoLeadsController::fetchDistributorLeadsCount'
+    _title: "Today's Leads"
+  requirements:
+    _permission: 'access content'
+
+aryoleads.update_leads_page:
+  path: '/update_leads_page'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\SelfLeadsUpdateForm'
+    _title: 'Update'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.self_leads:
+  path: '/self-leads'
+  defaults:
+    _controller: '\Drupal\aryoleads\Controller\SelfLeadsController::buildForm'
+    _title: 'Self Leads'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.selfleads_form:
+  path: '/downlaod-self-leads'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\SelfLeadsForm'
+    _title: 'Self Leads'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.selfleadsuser_form:
+  path: '/download-self-leads-of-user'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\SelfLeadsUserForm'
+    _title: 'Self User Leads'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.selfleadsbylead_id_form:
+  path: '/download-self-lead-by-leadId'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\SelfLeadsLeadIdForm'
+    _title: 'Self Lead Id'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.selfleadscount_form:
+  path: '/self-leads-count'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\LeadsCountForm'
+    _title: 'Self Lead Id'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.update_leads_form:
+  path: '/update-leads-form'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\SelfLeadsUpdateForm'
+    _title: 'Update'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.distributor_leads:
+  path: '/distributor-leads'
+  defaults:
+    _controller: '\Drupal\aryoleads\Controller\DistributorLeadsController::buildForm'
+    _title: 'Distributor Leads'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.distleads_form:
+  path: '/downlaod-distributor-leads'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\DistributorLeadsForm'
+    _title: 'Leads'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.teamleadsuser_form:
+  path: '/download-team-leads-of-agent'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\TeamLeadsDistributorForm'
+    _title: 'Self User Leads'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.distleadsbylead_id_form:
+  path: '/download-distributor-lead-by-leadId'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\DistributorLeadsLeadIdForm'
+    _title: 'Distributor Lead By Lead Id'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.distleadscount_form:
+  path: '/distributor-leads-count'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\DistributorLeadsCountForm'
+    _title: 'Distributor Lead Count'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.agent_profile_form:
+  path: '/agent-profile'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\AgentProfileForm'
+    _title: 'Agent Profile'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.update_distributor_leads_form:
+  path: '/update-distributor-leads-form'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\DistributorLeadsUpdateForm'
+    _title: 'Update'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.verify_pan_form:
+  path: '/verify-pan'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\VerifyPanForm'
+    _title: 'Verify Pan'
+  requirements:
+    _custom_access: 'aryoleads.verify_pan_service::getCurrentUserEmail'
+
+# entity.node.canonical:
+#   path: '/leads'
+#   defaults:
+#     _entity_view: 'node.full'
+#     _title: 'Leads'
+#   requirements:
+#     _custom_access: 'aryoleads.verify_pan_service::getCurrentUserEmail'
+
+aryoleads.profiles_form:
+  path: '/profile-form'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\ProfilesForm'
+    _title: 'Update'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.selfearning_update_form:
+  path: '/self-earning-update-form'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\EarningUpdateForm'
+    _title: 'Update'
+  requirements:
+    _permission: 'access content'
+
+aryoleads.agent_earning:
+  path: '/self-earning-form'
+  defaults:
+    _form: '\Drupal\aryoleads\Form\AgentEarningForm'
+    _title: 'Agent Earning'
+  requirements:
+    _permission: 'access content'
+
+
+

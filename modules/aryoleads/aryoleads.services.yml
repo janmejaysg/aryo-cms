@@ -1,0 +1,4 @@
+services:
+  aryoleads.verify_pan_service:
+    class: Drupal\aryoleads\Service\VerifyPanService
+    arguments: ['@current_user']

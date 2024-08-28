@@ -1,0 +1,53 @@
+aryoprojects.category_form:
+  path: '/all-categories'
+  defaults:
+    _form: '\Drupal\aryoprojects\Form\CategoryForm'
+    _title: 'Categories'
+  requirements:
+    _permission: 'access content'
+
+aryoprojects.project_form:
+  path: '/projects-by-category/{category}'
+  defaults:
+    _form: '\Drupal\aryoprojects\Form\ProjectsByCategoryForm'
+    _title: 'Projects'
+  requirements:
+    _permission: 'access content'
+
+aryoprojects.project_details:
+  path: '/projects/{category}/{projectName}/details'
+  defaults:
+    _form: '\Drupal\aryoprojects\Form\ProjectDetailsForm'
+    _title: 'Project Details'
+  requirements:
+    _permission: 'access content'
+
+
+
+aryoprojects.allcategories_form:
+  path: '/all-categories-for-inner-details'
+  defaults:
+    _form: '\Drupal\aryoprojects\Form\AllCategoriesForm'
+    _title: 'All Categories'
+  requirements:
+    _permission: 'access content'
+
+aryoprojects.all_projects_of_category:
+  path: '/all-projects/{categoryName}'
+  defaults:
+    _form: '\Drupal\aryoprojects\Form\AllProjectsForm'
+    _title: 'All Projects'
+  requirements:
+    _permission: 'access content'
+
+aryoprojects.project_details_of_selected_project:
+  path: '/all-projects/{categoryName}/{projectName}'
+  defaults:
+    _form: '\Drupal\aryoprojects\Form\ProjectInnerDetailsForm'
+    _title: 'All Projects'
+  requirements:
+    _permission: 'access content'
+
+
+
+

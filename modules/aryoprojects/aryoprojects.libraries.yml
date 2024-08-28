@@ -1,0 +1,10 @@
+aryoprojects_js_css:
+  version: 1.x
+  css:
+    theme:
+      css/aryoprojects.css: {}
+  js:
+    js/aryoprojects.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

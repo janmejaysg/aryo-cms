@@ -1,0 +1,6 @@
+ajaxdemo:
+  path: '/ajax/demo'
+  defaults:
+    _form: '\Drupal\ajaxexample\Form\AjaxForm'
+  requirements:
+    _permission: 'access content'

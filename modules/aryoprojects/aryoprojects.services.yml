@@ -1,0 +1,4 @@
+services:
+  aryoprojects.project_data_service:
+    class: Drupal\aryoprojects\Service\ProjectDataService
+    arguments: ['@http_client', '@cache.default']

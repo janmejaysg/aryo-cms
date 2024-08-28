@@ -1,0 +1,8 @@
+services:
+  huttiprojects.hutti_service:
+    class: Drupal\huttiprojects\Service\HuttiService
+    arguments: ['@http_client']
+
+  huttiprojects.hutti_clicks_controller:
+    class: Drupal\huttiprojects\Controller\HuttiClicksController
+    arguments: ['@http_client']
